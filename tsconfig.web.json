@@ -9,11 +9,45 @@
   "compilerOptions": {
     "composite": true,
     "jsx": "react-jsx",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowJs": true,
     "baseUrl": ".",
     "paths": {
       "@renderer/*": [
         "src/renderer/src/*"
       ]
-    }
+    },
+    /*互操作约束*/
+    "exactOptionalPropertyTypes": false,
+    // "isolatedModules": true,                          /*确保每个文件都可以安全传输，而不依赖其他导入——isolatedModules的值为true或false，指定是否将每个文件作为单独的模块，默认为true，它不可以和declaration同时设定*/
+    // "allowSyntheticDefaultImports": true,             /*当模块没有默认导出时，允许“从y导入x”——用来指定允许从没有默认导出的模块中默认导入*/
+    "esModuleInterop": true,                             /*发出额外的JavaScript，以简化对导入CommonJS模块的支持。这将启用“allowSyntheticDefaultImports”以实现类型兼容性——通过为导入内容创建命名空间，实现CommonJS和ES模块之间的互操作性*/
+    // "preserveSymlinks": true,                         /*禁用将符号链接解析到其realpath。这与节点中的同一标志相关——不把符号链接解析为真实路径，具体可以了解下webpack和node.js的symlink相关知识*/
+    "forceConsistentCasingInFileNames": true,            /*确保导入中的大小写正确*/
+    /*类型检查*/
+    "strict": false,                                      /*启用所有严格类型检查选项——严格模式将会打开下面的几个选项*/
+    "noImplicitAny": false,                            /*为隐含的'any'类型的表达式和声明启用错误报告*/
+    "strictNullChecks": false,                         /*在进行类型检查时，请考虑'null'和'undefined'——null类型检测,const teacher: string = null;会报错*/
+    "strictFunctionTypes": false,                      /*分配函数时，请检查以确保参数和返回值与子类型兼容——对函数参数进行严格逆变比较*/
+    "strictBindCallApply": false,                      /*检查'bind'、'call'和'apply'方法的参数是否与原始函数匹配——严格检查bind call apply*/
+    "strictPropertyInitialization": false,             /*检查构造函数中声明但未设置的类属性——此规则将验证构造函数内部初始化前后已定义的属性。*/
+    // "noImplicitThis": true,                           /*当'this'被赋予'any'类型时，启用错误报告——检测this是否隐式指定*/
+    // "useUnknownInCatchVariables": true,               /*将catch子句变量键入“unknown”而不是“any”*/
+    // "alwaysStrict": true,                             /*确保始终发出“use strict”——使用js的严格模式,在每一个文件上部声明 use strict*/
+    // "noUnusedLocals": true,                           /*在未读取局部变量时启用错误报告——默认false,是否检测定义了但是没使用的变量*/
+    // "noUnusedParameters": true,                       /*在未读取函数参数时引发错误——用于检查是否有在函数体中没有使用的参数*/
+    // "exactOptionalPropertyTypes": true,               /*将可选属性类型解释为书面形式，而不是添加“undefined”*/
+    // "noImplicitReturns": true,                        /*为未在函数中显式返回的代码路径启用错误报告——用于检查函数是否有返回值，设为true后，如果函数没有返回值则会提示*/
+    // "noFallthroughCasesInSwitch": true,               /*在switch语句中启用故障案例的错误报告——用于检查switch中是否有case没有使用break跳出switch*/
+    // "noUncheckedIndexedAccess": true,                 /*在索引签名结果中包含“undefined”*/
+    // "noImplicitOverride": true,                       /*确保使用覆盖修饰符标记派生类中的覆盖成员*/
+    // "noPropertyAccessFromIndexSignature": true,       /*对使用索引类型声明的键强制使用索引访问器*/
+    // "allowUnusedLabels": true,                        /*禁用未使用标签的错误报告*/
+    // "allowUnreachableCode": true,                     /*禁用无法访问代码的错误报告*/
+
+    /*完整性*/
+    // "skipDefaultLibCheck": true,                      /*跳过类型检查。d、 ts包含在TypeScript中的文件*/
+    "skipLibCheck": true                                 /*跳过类型检查全部。d、 ts文件*/
   }
 }
