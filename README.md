@@ -1,6 +1,6 @@
 # quickapp
 
-An Electron application with React and TypeScript
+An Low Code Designer
 
 ## Recommended IDE Setup
 
