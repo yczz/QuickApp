@@ -55,27 +55,34 @@ function App(props: AppProps) {
           </div>
         </Header>
         <Layout>
-          <Sider className={styles.left} width={'48px'}>
-            <div className={styles.leftContent}>
-              <div className={styles.leftStart}>
-                <Space size={'middle'} direction={'vertical'}>
-                  <div className={styles.leftIcon}>
-                    <IconFont type="icon-quickapp-xiangmu" />
-                  </div>
-                  <div className={styles.leftIcon}>
-                    <IconFont type="icon-quickapp-component" />
-                  </div>
-                </Space>
+          <div className={styles.left}>
+            <div className={styles.toolbar}>
+              <div className={styles.toolbarContent}>
+                <div className={styles.leftStart}>
+                  <Space size={'middle'} direction={'vertical'}>
+                    <div className={styles.leftIcon}>
+                      <IconFont type="icon-quickapp-xiangmu" />
+                    </div>
+                    <div className={styles.leftIcon}>
+                      <IconFont type="icon-quickapp-jiegousheji" />
+                    </div>
+                    <div className={styles.leftIcon}>
+                      <IconFont type="icon-quickapp-zujian" />
+                    </div>
+                  </Space>
+                </div>
+                <div className={styles.leftEnd}>
+                  <Space size={'middle'} direction={'vertical'}>
+                    <div className={styles.leftIcon}>
+                      <IconFont type="icon-quickapp-yonghuxieyi" />
+                    </div>
+                  </Space>
+                </div>
               </div>
-              <div className={styles.leftEnd}>
-                <Space size={'middle'} direction={'vertical'}>
-                  <div className={styles.leftIcon}>
-                    <IconFont type="icon-quickapp-yonghuxieyi" />
-                  </div>
-                </Space>
-              </div>
+              <div className={styles.toolbarStaticPanel}>111</div>
+              <div></div>
             </div>
-          </Sider>
+          </div>
           <Content className={styles.content}>
             <div className={styles.frame}>
               <div className={styles.body}></div>
