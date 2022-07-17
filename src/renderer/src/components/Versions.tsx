@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from '../assets/index.module.less';
+import styles from '../index.module.less';
 
 function Versions(): JSX.Element {
   const [versions] = useState(window.electron.process.versions);

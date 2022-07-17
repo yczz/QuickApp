@@ -35,8 +35,8 @@
     // "noImplicitThis": true,                           /*当'this'被赋予'any'类型时，启用错误报告——检测this是否隐式指定*/
     // "useUnknownInCatchVariables": true,               /*将catch子句变量键入“unknown”而不是“any”*/
     // "alwaysStrict": true,                             /*确保始终发出“use strict”——使用js的严格模式,在每一个文件上部声明 use strict*/
-    // "noUnusedLocals": true,                           /*在未读取局部变量时启用错误报告——默认false,是否检测定义了但是没使用的变量*/
-    // "noUnusedParameters": true,                       /*在未读取函数参数时引发错误——用于检查是否有在函数体中没有使用的参数*/
+    "noUnusedLocals": false,                           /*在未读取局部变量时启用错误报告——默认false,是否检测定义了但是没使用的变量*/
+    "noUnusedParameters": false,                       /*在未读取函数参数时引发错误——用于检查是否有在函数体中没有使用的参数*/
     // "exactOptionalPropertyTypes": true,               /*将可选属性类型解释为书面形式，而不是添加“undefined”*/
     // "noImplicitReturns": true,                        /*为未在函数中显式返回的代码路径启用错误报告——用于检查函数是否有返回值，设为true后，如果函数没有返回值则会提示*/
     // "noFallthroughCasesInSwitch": true,               /*在switch语句中启用故障案例的错误报告——用于检查switch中是否有case没有使用break跳出switch*/

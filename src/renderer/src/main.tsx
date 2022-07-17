@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './assets/index.module.less';
+import './index.module.less';
 import App from './App';
 
 ReactDOM.render(

@@ -38,6 +38,11 @@ export default defineConfig({
           javascriptEnabled: true
         }
       }
+    },
+    build: {
+      rollupOptions: {
+        external: ['antd']
+      }
     }
   }
 });
